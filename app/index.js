@@ -21,6 +21,8 @@ apiRouter.delete('', (req, res) => {
 });
 app.use('/hello', apiRouter);
 
+app.use(express.static('public'));
+
 const listener = app.listen(process.env.PORT, function() {
   console.log(`Listening on port ${listener.address().port}.`);
 });
