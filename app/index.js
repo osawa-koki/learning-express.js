@@ -5,19 +5,21 @@ import initializer from './initializer.js';
 initializer();
 
 const app = express();
+const apiRouter = express.Router();
 
-app.get('/hello', (req, res) => {
+apiRouter.get('', (req, res) => {
   res.send('Hello GET method!!!');
 });
-app.post('/hello', (req, res) => {
+apiRouter.post('', (req, res) => {
   res.send('Hello POST method!!!');
 });
-app.put('/hello', (req, res) => {
+apiRouter.put('', (req, res) => {
   res.send('Hello PUT method!!!');
 });
-app.delete('/hello', (req, res) => {
+apiRouter.delete('', (req, res) => {
   res.send('Hello DELETE method!!!');
 });
+app.use('/hello', apiRouter);
 
 const listener = app.listen(process.env.PORT, function() {
   console.log(`Listening on port ${listener.address().port}.`);
