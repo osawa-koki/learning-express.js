@@ -1,0 +1,10 @@
+{
+  "name": "learning-express.js",
+  "version": "1.0.0",
+  "description": "Expressを学習する！",
+  "main": "./app/index.js",
+  "repository": "https://github.com/osawa-koki/learning-express.js.git",
+  "author": "osawa-koki <github@osawa.dev>",
+  "license": "Apache-2.0",
+  "private": false
+}
